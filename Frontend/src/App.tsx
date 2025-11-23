@@ -159,10 +159,10 @@ function App() {
 
                 {/* Precios */}
                 <div className="pricing mt-8 mb-6 text-center">
-                    <p className="text-gray-900 font-bold text-4xl">$1000 - $4000</p>
+                    <p className="text-gray-900 font-bold text-4xl">Q1000 - Q4000</p>
                     <p className="text-gray-500 text-sm mt-1">Implementación</p>
 
-                    <p className="text-gray-900 font-bold text-2xl mt-4">$100 - $400</p>
+                    <p className="text-gray-900 font-bold text-2xl mt-4">Q100 - Q400</p>
                     <p className="text-gray-500 text-sm mt-1">Despliegue y mantenimiento</p>
                 </div>
 
@@ -205,10 +205,10 @@ function App() {
 
                 {/* Precios */}
                 <div className="pricing mt-8 mb-6 text-center">
-                    <p className="text-gray-900 font-bold text-4xl">$1250 - $5000</p>
+                    <p className="text-gray-900 font-bold text-4xl">Q1250 - Q5000</p>
                     <p className="text-gray-500 text-sm mt-1">Implementación</p>
 
-                    <p className="text-gray-900 font-bold text-2xl mt-4">$125 - $500</p>
+                    <p className="text-gray-900 font-bold text-2xl mt-4">Q125 - Q500</p>
                     <p className="text-gray-500 text-sm mt-1">Despliegue y mantenimiento</p>
                 </div>
 
@@ -251,10 +251,10 @@ function App() {
 
                 {/* Precios */}
                 <div className="pricing mt-8 mb-6 text-center">
-                    <p className="text-gray-900 font-bold text-4xl">$1750 - $7000</p>
+                    <p className="text-gray-900 font-bold text-4xl">Q1750 - Q7000</p>
                     <p className="text-gray-500 text-sm mt-1">Implementación</p>
 
-                    <p className="text-gray-900 font-bold text-2xl mt-4">$175 - $700</p>
+                    <p className="text-gray-900 font-bold text-2xl mt-4">Q175 - Q700</p>
                     <p className="text-gray-500 text-sm mt-1">Despliegue y mantenimiento</p>
                 </div>
 
