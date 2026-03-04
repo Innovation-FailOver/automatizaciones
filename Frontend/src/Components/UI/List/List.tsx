@@ -1,37 +1,29 @@
-import { CheckCircle } from "lucide-react";
 import { Options } from "./Options/Options";
 
 export default function List() {
     const options = Options;
 
     return (
-        <>
-        <ul className="space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {options.map((option, index) => (
-                <li 
+                <div
                     key={index}
-                    className="flex flex-col sm:flex-row items-start sm:items-center space-x-0 sm:space-x-4 space-y-2 sm:space-y-0 
-                            bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition"
+                    className="flex flex-col items-start bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition"
                 >
                     {/* Ícono */}
-                    <div className="flex-shrink-0">
-                        <div className="w-10 h-10 flex items-center justify-center rounded-full bg-green-100">
-                            <CheckCircle className="text-green-600 w-6 h-6" />
-                        </div>
+                    <div className="mb-4">
+                        <option.icon className="w-8 h-8 text-indigo-600" />
                     </div>
 
                     {/* Contenido */}
-                    <div>
-                        <span className="block text-lg font-semibold text-gray-800">
-                            {option.label}
-                        </span>
-                        <p className="text-gray-600 mt-1 text-sm leading-relaxed">
-                            {option.body}
-                        </p>
-                    </div>
-                </li>
+                    <span className="text-lg font-bold text-gray-900 mb-2">
+                        {option.label}
+                    </span>
+                    <p className="text-gray-500 text-sm leading-relaxed">
+                        {option.body}
+                    </p>
+                </div>
             ))}
-        </ul>
-        </>
-    )
+        </div>
+    );
 }
