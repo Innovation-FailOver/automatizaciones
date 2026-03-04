@@ -14,7 +14,7 @@ function App() {
     return (
         <>
             <Navbar scroll={scroll} />
-            <main className="min-h-screen">
+            <main className="min-h-screen pt-10">
                 <Home handleScroll={scroll.handleScroll} />
                 <Integrations />
                 <Impact />

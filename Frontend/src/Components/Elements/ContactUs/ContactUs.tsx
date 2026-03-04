@@ -30,7 +30,7 @@ export default function ContactUs() {
                         placeholder="Tu nombre"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="p-3 rounded-xl border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                        className="p-3 rounded-xl border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-200"
                         required
                     />
                     </div>
@@ -42,7 +42,7 @@ export default function ContactUs() {
                         placeholder="tucorreo@empresa.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="p-3 rounded-xl border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                        className="p-3 rounded-xl border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-200"
                         required
                     />
                     </div>
@@ -54,7 +54,7 @@ export default function ContactUs() {
                         placeholder="Cuéntanos qué necesitas..."
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="p-3 rounded-xl border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500"
+                        className="p-3 rounded-xl border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-200"
                         required
                     ></textarea>
                     </div>

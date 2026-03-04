@@ -95,7 +95,7 @@ export default function Plans() {
                                 {plan.features.map((feature, i) => (
                                     <li key={i} className="flex items-center gap-3 text-sm">
                                         <span className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center
-                                            ${plan.popular ? "bg-white/10 text-white" : "bg-green-50 text-green-600"}`}>
+                                            ${plan.popular ? "bg-white/10 text-white" : "bg-indigo-50 text-indigo-600"}`}>
                                             ✓
                                         </span>
                                         <span className={plan.popular ? "text-gray-300" : "text-gray-600"}>
@@ -118,10 +118,10 @@ export default function Plans() {
 
                             {/* CTA */}
                             <button
-                                className={`w-full py-3 rounded-2xl font-semibold text-sm transition-all duration-200
+                                className={`w-full py-3 rounded-2xl font-semibold text-sm transition-all duration-200 cursor-pointer
                                     ${plan.popular
                                         ? "bg-white text-gray-900 hover:bg-gray-100"
-                                        : "border-2 border-gray-200 text-gray-800 hover:border-blue-500 hover:text-blue-600"
+                                        : "border-2 border-gray-200 text-gray-800 hover:border-indigo-500 hover:text-indigo-600"
                                     }`}
                             >
                                 {plan.cta}

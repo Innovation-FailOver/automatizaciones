@@ -24,7 +24,7 @@ export default function Navbar({ scroll } : Props) {
                                 key={index}
                                 // href={option.link}
                                 onClick={() => handleScroll(option.link)}
-                                className="text-gray-600 hover:scale-110 transition duration-250 cursor-pointer"
+                                className="text-gray-600 hover:text-indigo-600 hover:scale-110 transition duration-250 cursor-pointer"
                             >
                                 {option.label}
                             </a>
