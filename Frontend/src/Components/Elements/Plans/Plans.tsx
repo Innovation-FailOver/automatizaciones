@@ -1,4 +1,7 @@
+import { useInView } from "../../../Hook/useInView";
+
 export default function Plans() {
+    const { ref, inView } = useInView();
     const plans = [
         {
             id: "A",
@@ -48,7 +51,7 @@ export default function Plans() {
     ];
 
     return (
-        <section id="planes" className="py-28 bg-gray-50">
+        <section id="planes" className="py-28 bg-gray-50" ref={ref}>
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Título */}
@@ -65,10 +68,9 @@ export default function Plans() {
                         <div
                             key={plan.id}
                             className={`relative rounded-3xl p-10 flex flex-col transition-all duration-300 hover:-translate-y-1
-                                ${plan.popular
-                                    ? "bg-gray-900 text-white shadow-2xl scale-105"
-                                    : "bg-white border border-gray-200 text-gray-900 hover:border-gray-900 hover:shadow-xl shadow-gray-300"
-                                }`}
+                                ${plan.popular ? "bg-gray-900 text-white shadow-2xl scale-105" : "bg-white border border-gray-200 ..."}
+                                ${inView ? `animate-fade-up delay-${["100","200","300"][plans.indexOf(plan)]}` : "will-animate"}`
+                            }
                         >
                             {/* Badge Más Popular */}
                             {plan.popular && (

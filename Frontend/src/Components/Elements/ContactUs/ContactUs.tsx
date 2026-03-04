@@ -1,18 +1,21 @@
 import { useContact } from "../../../Hook/useContact";
+import { useInView } from "../../../Hook/useInView";
 import Button from "../../UI/Button/Button";
 
 export default function ContactUs() {
+    const { ref, inView } = useInView();
     const { sendMessage, loading, success, error, name, setName, email, setEmail, message, setMessage } = useContact();
 
     return (
-        <section id="contacto" className="py-20">
-            <div className="relative rounded-3xl p-12 text-center overflow-hidden">
+        <section id="contacto" className="py-20" ref={ref}>
+            <div className={`relative rounded-3xl p-12 text-center overflow-hidden transition-all duration-700
+                ${inView ? "animate-fade-up" : "will-animate"}`}>
                 <div className="relative z-10">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
                     ¿Listo para transformar tu empresa?
                 </h2>
                 <p className="mb-8 text-lg sm:text-xl opacity-90">
-                    ¡¡Contactanos!!, con mucho gusto te atenderemos y ayudaremos a encontrar la mejor solución para ti.
+                    Únete a cientos de empresas que ya están ahorrando miles de horas de trabajo cada mes.
                 </p>
                 {/* Formulario */}
                 <form

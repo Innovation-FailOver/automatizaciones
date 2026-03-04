@@ -1,4 +1,7 @@
+import { useInView } from "../../../Hook/useInView";
+
 export default function Impact() {
+    const { ref, inView } = useInView();
     const data = [
         {
             head: "90%",
@@ -33,15 +36,17 @@ export default function Impact() {
     ]
 
     return (
-        <section className=" bg-gray-900 py-10 relative overflow-hidden">
+        <section className="bg-gray-900 py-10 relative overflow-hidden" ref={ref}>
             <div className="container mx-auto px-4 text-center relative z-10">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {data.map((option, index) => (
-                        <div key={index} className="bg-gray-900 p-8 rounded-xl flex flex-col items-center justify-center">
+                        <div
+                            key={index}
+                            className={`bg-gray-900 p-8 rounded-xl flex flex-col items-center justify-center
+                                ${inView ? `animate-scale-in delay-${index + 1}00` : "will-animate"}`}
+                        >
                             <span className="text-5xl font-bold mb-4 text-white">{option.head}</span>
-                            <p className="text-gray-500 text-center text-lg">
-                                {option.body}
-                            </p>
+                            <p className="text-gray-500 text-center text-lg">{option.body}</p>
                         </div>
                     ))}
                 </div>
